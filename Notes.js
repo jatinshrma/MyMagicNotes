@@ -93,8 +93,8 @@ function showNotes() {
         notesElem.innerHTML = `Nothing to show, add something using above section.`
     }
 
-    titleObj.forEach(function (element, index){
-        document.getElementById(`${index}title`).innerText= `${element}`;
+    titleObj.forEach(function (element, index) {
+        document.getElementById(`${index}title`).innerText = `${element}`;
     });
 
 };
@@ -208,7 +208,7 @@ function restore(index) {
 
     notesObj.push(deletedNoteObj.slice(-1)[0]);
     localStorage.setItem('notes', JSON.stringify(notesObj));
-    
+
     deletedTitleObj.splice(-1);
     deletedNoteObj.splice(-1);
     sessionStorage.setItem('deletedTitle', JSON.stringify(deletedTitleObj));
