@@ -6,14 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic Notes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-<style>
-    #addTxt {
-        height: 200px;
-    }
-</style>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -31,9 +26,8 @@
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <input id="searchTxt" class="form-control me-2" type="search"
-                        placeholder="Type to search -> 'a' and 'A' are two different inputs..." aria-label="Search"
-                        style="width: 430px;">
+                    <input id="searchTxt" class="form-control me-2" type="search" placeholder="Type to search..."
+                        aria-label="Search">
                 </form>
             </div>
         </div>
@@ -43,21 +37,20 @@
         <h1 style="margin: 13px 0;">
             Welcome to My Magic Notes
         </h1>
-        <div class="card">
-            <div class="card-body">
+        <div class="card" style="border: none;">
+            <div class="card-body" style="padding: 0;">
                 <div id="addTitle">
-                    <h4 class="card-title">Add Title</h4>
+                    <h4 class="card-title my-3">Add Title</h4>
                 </div>
-                <hr>
-                <h4>Add Note</h4>
+                <h4 class="my-3">Add Note</h4>
                 <div class="input-group my-3">
-                    <textarea class="form-control" id="addTxt" aria-label="With textarea"></textarea>
+                    <textarea style="min-height: 120px;" class="form-control" id="addTxt"
+                        aria-label="With textarea"></textarea>
                 </div>
                 <button class="btn btn-primary" id="addBtn">Add Note</button>
             </div>
         </div>
-        <hr>
-        <h3>Your Notes</h3>
+        <h3 style="margin-top: 30px;">Your Notes</h3>
         <hr>
         <div id="notes" class="row container-fluid"></div>
         <div id="alertMessage"></div>
