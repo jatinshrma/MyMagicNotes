@@ -154,6 +154,17 @@ function delNote(index) {
 // Search & Filter
 // Filter your notes by fetching data from containing tag and then comparing search input, if any note does not match the search input, it's display will be set to "none".
 
+let buttonToggler = document.getElementById('buttonToggler').addEventListener('click', ()=>{
+
+    const expandArea = document.getElementById('navbarSupportedContent')
+    if (expandArea.style.display=="block") {
+        expandArea.style.display = "none";
+    }    
+    else {
+        expandArea.style.display = "block";
+    }
+})
+
 searchTxt.addEventListener('input', function () {
     inputVal = searchTxt.value;
     let cardBody = document.getElementsByClassName('notecard');
@@ -181,9 +192,9 @@ function showAlert(index) {
         html += `<div id="Alert${index}" class="alert alert-primary align-items-center my-3" role="alert" style= "display: flex; align-items: center;">
         <div>
             If you've deleted a note unintentionally, you can undo it from here.
-        </div>
-        <button type="button" id="${index}" onClick="restore(this.id)" class="btn btn-secondary" id="button" style="position: absolute; right: 52px;">Undo</button>
-        <button type="button" id="cross" onClick="cross(this.class)" class="${index} btn-close" data-bs-dismiss="alert" aria-label="Close" style="position: absolute; right: 14px;"></button>
+            <button type="button" id="${index}" onClick="restore(this.id)" class="btn btn-secondary" id="button" style="position: absolute; right: 52px;">Undo</button>
+            <button type="button" id="cross" onClick="cross(this.class)" class="${index} btn-close" data-bs-dismiss="alert" aria-label="Close" style="position: absolute; right: 14px;"></button>
+            </div>
         </div>
         `;
     });
